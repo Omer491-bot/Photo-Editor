@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    <div class="tools">
+        <ul>
+            <li>
+                <i class='bx bxs-brightness-half'></i>
+                <p>Brightness</p>
+            </li>
+            <li>
+                <i class='bx bx-brush'></i>
+                <p>Blur</p>
+            </li>
+            <li>
+                <i class='bx bx-collection' ></i>
+                <p>Grey Scale</p>
+            </li>
+            <li>
+                <i class='bx bxs-color-fill'></i>
+                <p>Hue rotate</p>
+            </li>
+            <li>
+                <i class='bx bxs-magic-wand' ></i>
+                <p>Saturation</p>
+            </li>
+            <li onclick="Download_btn()">
+                <i class='bx bx-export' ></i>
+                <p>Export</p>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <p id="logo">Photo Editor</p>
+        <div class="choose_img">
+            <div class="upload_img_box">
+                <i class="bx bxs-img-add"> </i><br>
+                <input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg , image/png">
+                <p id="hint">Choose Image from folder</p>
+            </div>
+
+        </div>
+
+        <canvas id="image_cavas"></canvas>
+
+        <div class="imge_holder">
+            <button id="remove_img_btn"><i class='bx bxs-message-square-x'></i></button>
+            <img src="" alt="image" id="image">
+        </div>
+
+        <div class="options">
+            <div class="option">
+                <input type="range" max="200" min="0" value="100" id="brightness" class="slider">
+                <p id="brightVal" class="show_value">100</p>
+            </div>
+            <div class="option">
+                <input type="range" max="40" min="0" value="100" id="blur" class="slider">
+                <p id="blurVal" class="show_value">0</p>
+            </div>
+            <div class="option">
+                <input type="range" max="100" min="0" value="0" id="greyScale" class="slider">
+                <p id="greytVal" class="show_value">0</p>
+            </div>
+            <div class="option">
+                <input type="range" max="100" min="0" value="100" id="hue" class="slider">
+                <p id="hueVal" class="show_value">0</p>
+            </div>
+            <div class="option">
+                <input type="range" max="200" min="0" value="100" id="Saturation" class="slider">
+                <p id="saturationVal" class="show_value">100</p>
+            </div>
+        </div>
+        <button id="clearAll" > <span>Reset</span><i class='bx bx-reset' ></i></button>
+    </div>
+     
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
